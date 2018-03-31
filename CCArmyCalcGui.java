@@ -46,12 +46,13 @@ public class CCArmyCalcGui extends Application {
         mainMenuPane.setAlignment(Pos.CENTER);
         mainMenuPane.setPadding(new Insets(PADDING_SIZE));
         mainMenuPane.setPrefSize(PREF_WIDTH, PREF_HEIGHT);
-        mainMenuPane.setHgap(PADDING_SIZE);
+        mainMenuPane.setHgap(25);
         mainMenuPane.setVgap(PADDING_SIZE);
         topLevelPane.setCenter(mainMenuPane);
 
         //road mode button & action
         Button roadButton = new Button("Road");
+        roadButton.setStyle("-fx-font-size: 18; ");
         mainMenuPane.add(roadButton, 0, 0);
         roadButton.setOnAction(e-> {
             setRoadPane();
@@ -59,6 +60,7 @@ public class CCArmyCalcGui extends Application {
 
         //non road mode button & action
         Button nonRoadButton = new Button("Non Road");
+        nonRoadButton.setStyle("-fx-font-size: 18; ");
         mainMenuPane.add(nonRoadButton, 1, 0);
         nonRoadButton.setOnAction(e-> {
             setNonRoadPane();
